@@ -1,0 +1,61 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: black;
+}
+
+.btn-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+button{
+  font-size: 25px;
+  padding: 10px;
+}
+
+.canvas-container{
+  margin: 30px auto;
+  width: 1500px;
+}
+
+#canvas{
+  height: 500px;
+  width: 1500px;
+  position: relative;
+}
+
+/* Elementi generativi */
+#canvas [id]{
+  position: absolute;
+}
+#color{
+  height: 100%;
+  width: 100%;
+}
+#sky, #floor{
+  height: 100%;
+  width: 100%;
+}
+
+#ufo{
+  animation: float 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(4px, -2px);
+  }
+  50% {
+    transform: translate(-4px, 2px);
+  }
+  100%{
+    transform: translate(4px, -2px);
+  }
+}
